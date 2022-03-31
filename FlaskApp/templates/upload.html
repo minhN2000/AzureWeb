@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Upload</title>
+</head>
+
+<body>
+    <div class="form">
+
+        <form action="/uploader" method="POST" enctype="multipart/form-data">
+            <div class="container">
+                <p>Household</p>
+                <input class="upload" type="file" name="file1" />
+                
+                <p>Products</p>
+                <input class="upload" type="file" name="file2" />
+                
+                <p>Transaction</p>
+                <input class="upload" type="file" name="file3" />
+
+                <div class="item">
+                    <label>Select a year:</label>
+                    <select name="year_2" id="years">
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2020" selected>2021</option>
+                    </select>
+                </div>
+                
+                <div class="item">
+                    <label>Please enter a house hold number to search for:</label>
+                    <input type="text" name="hshd_num_2" value="10" required>
+                </div>
+                
+                <input class="submit" type="submit" />
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    margin: 1rem;
+}
+
+h2 {
+    margin: 1rem;
+}
+
+p {
+    margin: 1rem;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    padding: 20rem;
+}
+
+.formDashboard {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 4rem;
+    background: #dbdbdb;
+    border: 1px solid;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-block-end: 2rem;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.submit {
+    border: 1px solid;
+    border-radius: .5rem;
+    margin-top: .5rem;
+}
+
+.text {
+    display: flex;
+    max-width: 40rem
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    max-width: 20rem;
+}
+
+table {
+    width: 100%;
+    margin: 5px;
+    border-width: 1px;
+    border-spacing: 2px;
+    border-style: outset;
+    border-color: gray;
+    border-collapse: separate;
+    background-color: white;
+}
+
+.results {
+    max-width: 600px;
+}
+
+.dataPull {
+    overflow: scroll;
+    max-height: 50rem;
+    display: block;
+}
+
+td {
+    text-align: center;
+    border-width: 1px;
+    border-style:   groove;
+    border-color: gray;
+    background-color: white;
+}
+
+.upload {
+    margin-top: .5rem;
+}

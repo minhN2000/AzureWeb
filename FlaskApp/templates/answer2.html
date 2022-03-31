@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Answer 2</title>
+</head>
+
+<body>
+    <div class="formDashboard">
+        <div class="container">
+            <div class="item header">
+                <h1>Overall Results</h1>
+            </div>
+
+            <div class="item text">
+                <h2>Retail Question 2</h2>
+
+                <p>
+                    To answer retail question 2, our group looked at how spending changed from families with 1 child to
+                    families with 3+ children
+                    in the baby and toys category in 2019.
+                </p>
+
+                <table class="dataPull">
+                    <thead>
+                        <th>Year</th>
+                        <th>Total Spending 1-2</th>
+                    </thead>
+
+                    <tbody>
+                        {% for row in total1 %}
+                        <tr>
+                            <td>{{row[0]}}</td>
+                            <td>{{row[1]}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+
+                    <thead>
+                        <th>Year</th>
+                        <th>Total Spending 3+</th>
+                    </thead>
+
+                    <tbody>
+                        {% for row in total2 %}
+                        <tr>
+                            <td>{{row[0]}}</td>
+                            <td>{{row[1]}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <p>
+                    Here we can see that there are many more people with 1-2 children than 3+ children.
+                </p>
+
+                <table class="dataPull">
+                    <thead>
+                        <th>Year</th>
+                        <th>1-2 Children</th>
+                    </thead>
+
+                    <tbody>
+                        {% for row in count1 %}
+                        <tr>
+                            <td>{{row[0]}}</td>
+                            <td>{{row[1]}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+
+                    <thead>
+                        <th>Year</th>
+                        <th>3+ Children</th>
+                    </thead>
+
+                    <tbody>
+                        {% for row in count2 %}
+                        <tr>
+                            <td>{{row[0]}}</td>
+                            <td>{{row[1]}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <p>
+                    The results from this show that spending is much higher with people with 1-2 children. This could be
+                    due to there being a higher
+                    amount of people with 1-2 children than 3+ children.
+                </p>
+            </div>
+
+            <form action="/uploadCSV" method="GET">
+                <div class="item">
+                    <button class="submit" id="getA" type="submit">Go to upload Page</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

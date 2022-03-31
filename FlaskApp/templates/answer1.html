@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Answer 1</title>
+</head>
+
+<body>
+    <div class="formDashboard">
+        <div class="container">
+            <div class="item header">
+                <h1>Overall Results</h1>
+            </div>
+
+            <div class="item text">
+                <h2>Retail Question 1</h2>
+
+                <p>
+                    To answer retail question 1, our group looked at how total spending changed from the first half of
+                    2019 to the first half of 2020.
+                </p>
+
+                <table class="dataPull">
+                    <thead>
+                        <th>Year</th>
+                        <th>Total Spending</th>
+                    </thead>
+
+                    <tbody>
+                        {% for row in total %}
+                        <tr>
+                            <td>{{row[0]}}</td>
+                            <td>{{row[1]}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <p>
+                    The data shows that user engagement increaseed as total spending went up almost $100k from the previous year. This could be due to people
+                    stocking up on food and other supplies due to covid. This could also be due to more people deciding to shop at Kroger.
+                </p>
+
+            </div>
+
+            <form action="/answer2" method="GET">
+                <button class="submit" id="getAnswer" type="submit">Answer 2</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
